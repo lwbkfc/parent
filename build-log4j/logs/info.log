@@ -1,0 +1,16 @@
+[INFO ] [00:04:43] org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+  [INFO ] [00:04:43] org.springframework.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Thu Jan 07 00:04:43 CST 2016]; root of context hierarchy
+  [INFO ] [00:04:43] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from URL [file:/Users/lwb/IdeaProjects/parent/build-log4j/target/classes/springContext.xml]
+  [INFO ] [00:04:44] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Jan 07 00:04:43 CST 2016]; root of context hierarchy
+  [INFO ] [00:04:44] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/log4j/test]}" onto public java.lang.String com.lin.action.TestAction.test(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+  [INFO ] [00:04:44] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Jan 07 00:04:43 CST 2016]; root of context hierarchy
+  [INFO ] [00:04:44] org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1635 ms
+  [INFO ] [00:04:44] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started
+  [INFO ] [00:04:44] org.springframework.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Jan 07 00:04:44 CST 2016]; parent: Root WebApplicationContext
+  [INFO ] [00:04:44] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from URL [file:/Users/lwb/IdeaProjects/parent/build-log4j/target/classes/springContext.xml]
+  [INFO ] [00:04:44] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Jan 07 00:04:44 CST 2016]; parent: Root WebApplicationContext
+  [INFO ] [00:04:44] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/log4j/test]}" onto public java.lang.String com.lin.action.TestAction.test(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+  [INFO ] [00:04:44] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Jan 07 00:04:44 CST 2016]; parent: Root WebApplicationContext
+  [INFO ] [00:04:45] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 328 ms
+  [ERROR] [00:04:52] com.lin.action.TestAction - jjjjjjjjjjjjjj
+  

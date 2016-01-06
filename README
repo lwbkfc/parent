@@ -1,0 +1,11 @@
+概况，parent-my是一个maven工程，下面有很多模块，每个模块功能单一，使用jetty做web容器。方便一些。
+
+1、 build-springmvc
+
+功能：spring-mvc的demo。
+
+能正常运行，提供了spring mvc 的hello world。中间解决了@ResponseBody中文乱码的问题。
+
+HttpServletRequest由javax.servlet.api提供。
+
+2、build-log4j
