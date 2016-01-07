@@ -1,7 +1,8 @@
 package com.lin.action;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.lin.po.User;
+import com.lin.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -11,17 +12,23 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.UnsupportedEncodingException;
 
 /**
- * Created by Administrator on 2016/1/6.
+ * Created by lwb on 2016/1/6.
  */
 @Controller
-@RequestMapping("/log4j")
+@RequestMapping("/mongo")
 public class TestAction {
-    final Logger logger = LoggerFactory.getLogger(TestAction.class);
+    @Autowired
+    private UserService userService;
     @RequestMapping(value = "/test")
     @ResponseBody
-
     public String test(HttpServletRequest request,HttpServletResponse response){
-        logger.error("hello world dddddd............................");
+
+        User user = new User();
+        user.setId(1L);
+        user.setUsername("林文波");
+        user.setPassword("tiantian");
+
+        userService.insert(user);
         return "4444欢迎你，北京";
     }
 }

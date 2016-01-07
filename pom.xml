@@ -10,7 +10,29 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>build-springmvc</module>
+        <module>build-log4j</module>
+        <module>build-mongo</module>
     </modules>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>nexus</id>
+            <name>Team Nexus Repository</name>
+            <url>http://120.24.3.69:8081/nexus/content/groups/public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <url>http://120.24.3.69:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <url>http://120.24.3.69:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -20,6 +42,11 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
+            <version>4.2.4.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
             <version>4.2.4.RELEASE</version>
         </dependency>
         <dependency>
@@ -69,7 +96,7 @@
                 <!--</connectors>-->
                 <!--</configuration>-->
                 <configuration>
-                    <contextPath>/test-mvc</contextPath>
+                    <contextPath>/parent</contextPath>
                 </configuration>
             </plugin>
         </plugins>

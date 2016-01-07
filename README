@@ -9,3 +9,9 @@
 HttpServletRequest由javax.servlet.api提供。
 
 2、build-log4j
+
+spring整合slf4j和log4j，提供日志记录功能,确定了日志所用的jar包，web.xml的配置。
+
+3、build-mongo
+
+spring整合mongo，
