@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       <!--引入配置文件-->
+       <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+              <property name="location" value="classpath:jdbc.properties"></property>
+       </bean>
+       <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+              <property name="user" value="${username}"></property>
+              <property name="password" value="${password}"></property>
+              <property name="driverClass" value="${driver}"></property>
+              <property name="jdbcUrl" value="${url}"></property>
+       </bean>
+
+       <!--spring和mybatis整合，不需要mybatis的配置映射文件-->
+       <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+              <property name="dataSource" ref="dataSource"></property>
+              <property name="configLocation" value="mybatis.xml"></property>
+
+       </bean>
+
+       <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+              <property name="basePackage" value="com.lin.dao"></property>
+              <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+       </bean>
+
+       <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+              <property name="dataSource" ref="dataSource"></property>
+       </bean>
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
