@@ -4,7 +4,7 @@ import com.lin.po.User;
 import org.springframework.stereotype.Repository;
 
 /**
- * Created by Administrator on 2016/1/8.
+ * Created by Administrator on 2016/pattern1/8.
  */
 @Repository
 public interface UserMapper {

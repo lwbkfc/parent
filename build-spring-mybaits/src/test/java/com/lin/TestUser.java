@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import javax.annotation.Resource;
 
 /**
- * Created by Administrator on 2016/1/8.
+ * Created by Administrator on 2016/pattern1/8.
  */
 @RunWith(SpringJUnit4ClassRunner.class)     //表示继承了SpringJUnit4ClassRunner类
 @ContextConfiguration(locations = {"classpath:springContext.xml"})

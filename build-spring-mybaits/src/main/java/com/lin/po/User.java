@@ -1,7 +1,7 @@
 package com.lin.po;
 
 /**
- * Created by Administrator on 2016/1/8.
+ * Created by Administrator on 2016/pattern1/8.
  */
 public class User {
     private long id;
