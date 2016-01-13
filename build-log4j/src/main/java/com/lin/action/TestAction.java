@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.UnsupportedEncodingException;
 
 /**
- * Created by Administrator on 2016/1/6.
+ * Created by Administrator on 2016/pattern1/6.
  */
 @Controller
 @RequestMapping("/log4j")
