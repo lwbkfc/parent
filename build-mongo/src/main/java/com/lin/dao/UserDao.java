@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Repository;
 
 /**
- * Created by Administrator on 2016/1/7.
+ * Created by Administrator on 2016/pattern1/7.
  */
 @Repository
 public class UserDao {

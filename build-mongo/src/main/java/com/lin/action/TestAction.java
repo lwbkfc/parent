@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.UnsupportedEncodingException;
 
 /**
- * Created by lwb on 2016/1/6.
+ * Created by lwb on 2016/pattern1/6.
  */
 @Controller
 @RequestMapping("/mongo")
