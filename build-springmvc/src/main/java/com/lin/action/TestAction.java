@@ -17,9 +17,9 @@ public class TestAction {
     @RequestMapping(value = "/test")
     @ResponseBody
 
-    public String test(HttpServletRequest request,HttpServletResponse response){
+    public String test(HttpServletRequest request,HttpServletResponse response) throws InterruptedException {
 
-
+        Thread.sleep(1000*60*5);
         return "4444欢迎你，北京";
     }
 }
