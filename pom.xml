@@ -12,24 +12,40 @@
         <module>build-springmvc</module>
         <module>build-log4j</module>
         <module>build-mongo</module>
+        <module>test-test</module>
     </modules>
     <!--为了项目能够自动deploy到私服-->
+    <repositories>
+        <repository>
+            <id>nexus-releases</id>
+            <url>http://192.168.0.3:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <repository>
+            <id>nexus-snapshots</id>
+            <url>http://192.168.0.3:8081/nexus/content/repositories/snapshots/</url>
+        </repository>
+        <repository>
+            <id>nexus-thirdparty</id>
+            <url>http://192.168.0.3:8081/nexus/content/repositories/thirdparty/</url>
+        </repository>
+    </repositories>
+
     <pluginRepositories>
         <pluginRepository>
             <id>nexus</id>
             <name>Team Nexus Repository</name>
-            <url>http://120.24.3.69:8081/nexus/content/groups/public/</url>
+            <url>http://192.168.0.3:8081/nexus/content/groups/public</url>
         </pluginRepository>
     </pluginRepositories>
 
     <distributionManagement>
         <repository>
             <id>nexus-releases</id>
-            <url>http://120.24.3.69:8081/nexus/content/repositories/releases/</url>
+            <url>http://192.168.0.3:8081/nexus/content/repositories/releases/</url>
         </repository>
         <snapshotRepository>
             <id>nexus-snapshots</id>
-            <url>http://120.24.3.69:8081/nexus/content/repositories/snapshots/</url>
+            <url>http://192.168.0.3:8081/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -106,7 +122,31 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.38</version>
         </dependency>
-
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring</artifactId>
+            <version>2.5.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.4</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.9.2</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.bblink.common</groupId>
+            <artifactId>bblink_common</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>rop-sample</finalName>

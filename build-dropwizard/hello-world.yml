@@ -1,0 +1,9 @@
+spring:
+  appContextType: web
+  configLocationsType: classpath
+  configLocations:
+#        - bblink-auth.xml
+        - spring-core.xml
+#        - dubbo-activity-consumer.xml
+#        - dubbo-activity-action.xml
+

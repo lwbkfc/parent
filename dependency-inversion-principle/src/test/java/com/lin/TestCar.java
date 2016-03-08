@@ -10,7 +10,7 @@ import org.jmock.integration.junit4.JUnit4Mockery;
 import org.junit.Test;
 
 /**
- * Created by lwb on 16/1/11.
+ * Created by lwb on 16/pattern1/11.
  */
 public class TestCar extends TestCase {
     Mockery context = new JUnit4Mockery();

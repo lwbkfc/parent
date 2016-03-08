@@ -1,0 +1,158 @@
+INFO  [2016-02-19 16:15:09,669] org.eclipse.jetty.util.log: Logging initialized @1519ms
+INFO  [2016-02-19 16:15:09,752] io.dropwizard.server.ServerFactory: Starting hello-world
+INFO  [2016-02-19 16:15:09,759] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2016-02-19 16:15:09,774] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2016-02-19 16:15:09,800] org.eclipse.jetty.setuid.SetUIDListener: Opened application@1991f767{HTTP/1.1}{0.0.0.0:18000}
+INFO  [2016-02-19 16:15:09,800] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@768ccdc5{HTTP/1.1}{0.0.0.0:18010}
+INFO  [2016-02-19 16:15:09,803] org.eclipse.jetty.server.Server: jetty-9.2.13.v20150730
+INFO  [2016-02-19 16:15:10,343] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /hello-world (com.lin.resource.HelloWorldResource)
+
+INFO  [2016-02-19 16:15:10,345] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@35ff8fc9{/,null,AVAILABLE}
+INFO  [2016-02-19 16:15:10,351] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2016-02-19 16:15:10,356] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@2b556bb2{/,null,AVAILABLE}
+INFO  [2016-02-19 16:15:10,408] org.eclipse.jetty.server.ServerConnector: Started application@1991f767{HTTP/1.1}{0.0.0.0:18000}
+INFO  [2016-02-19 16:15:10,410] org.eclipse.jetty.server.ServerConnector: Started admin@768ccdc5{HTTP/1.1}{0.0.0.0:18010}
+INFO  [2016-02-19 16:15:10,410] org.eclipse.jetty.server.Server: Started @2261ms
+ERROR [2016-02-19 16:15:47,196] io.dropwizard.jersey.errors.LoggingExceptionMapper: Error handling a request: 68b77f125478cd8d
+! java.lang.NullPointerException: null
+! at com.lin.resource.HelloWorldResource.sayHello(HelloWorldResource.java:32) ~[classes/:na]
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
+! at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+! at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81) ~[jersey-server-2.22.1.jar:na]
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144) ~[jersey-server-2.22.1.jar:na]
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161) ~[jersey-server-2.22.1.jar:na]
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$TypeOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:205) ~[jersey-server-2.22.1.jar:na]
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99) ~[jersey-server-2.22.1.jar:na]
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389) ~[jersey-server-2.22.1.jar:na]
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347) ~[jersey-server-2.22.1.jar:na]
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102) ~[jersey-server-2.22.1.jar:na]
+! at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326) ~[jersey-server-2.22.1.jar:na]
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271) [jersey-common-2.22.1.jar:na]
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267) [jersey-common-2.22.1.jar:na]
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:315) [jersey-common-2.22.1.jar:na]
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:297) [jersey-common-2.22.1.jar:na]
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:267) [jersey-common-2.22.1.jar:na]
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317) [jersey-common-2.22.1.jar:na]
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305) [jersey-server-2.22.1.jar:na]
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154) [jersey-server-2.22.1.jar:na]
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:471) [jersey-container-servlet-core-2.22.1.jar:na]
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:425) [jersey-container-servlet-core-2.22.1.jar:na]
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:383) [jersey-container-servlet-core-2.22.1.jar:na]
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:336) [jersey-container-servlet-core-2.22.1.jar:na]
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:223) [jersey-container-servlet-core-2.22.1.jar:na]
+! at io.dropwizard.jetty.NonblockingServletHolder.handle(NonblockingServletHolder.java:49) [dropwizard-jetty-0.9.2.jar:0.9.2]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1669) [jetty-servlet-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.servlets.UserAgentFilter.doFilter(UserAgentFilter.java:83) [jetty-servlets-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.servlets.GzipFilter.doFilter(GzipFilter.java:364) [jetty-servlets-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at io.dropwizard.jetty.BiDiGzipFilter.doFilter(BiDiGzipFilter.java:132) [dropwizard-jetty-0.9.2.jar:0.9.2]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652) [jetty-servlet-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) [dropwizard-servlets-0.9.2.jar:0.9.2]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652) [jetty-servlet-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:43) [dropwizard-jersey-0.9.2.jar:0.9.2]
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:38) [dropwizard-jersey-0.9.2.jar:0.9.2]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652) [jetty-servlet-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:585) [jetty-servlet-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127) [jetty-server-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515) [jetty-servlet-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061) [jetty-server-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) [jetty-server-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97) [jetty-server-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at com.codahale.metrics.jetty9.InstrumentedHandler.handle(InstrumentedHandler.java:240) [metrics-jetty9-3.1.2.jar:3.1.2]
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:51) [dropwizard-jetty-0.9.2.jar:0.9.2]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97) [jetty-server-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:159) [jetty-server-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97) [jetty-server-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.server.Server.handle(Server.java:499) [jetty-server-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:310) [jetty-server-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257) [jetty-server-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540) [jetty-io-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635) [jetty-util-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555) [jetty-util-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+INFO  [2016-02-19 16:16:05,976] org.eclipse.jetty.util.log: Logging initialized @1585ms
+INFO  [2016-02-19 16:16:06,191] io.dropwizard.server.ServerFactory: Starting hello-world
+INFO  [2016-02-19 16:16:06,199] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2016-02-19 16:16:06,221] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2016-02-19 16:16:06,254] org.eclipse.jetty.setuid.SetUIDListener: Opened application@1991f767{HTTP/1.1}{0.0.0.0:18000}
+INFO  [2016-02-19 16:16:06,254] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@768ccdc5{HTTP/1.1}{0.0.0.0:18010}
+INFO  [2016-02-19 16:16:06,256] org.eclipse.jetty.server.Server: jetty-9.2.13.v20150730
+INFO  [2016-02-19 16:16:06,777] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /hello-world/hello (com.lin.resource.HelloWorldResource)
+
+INFO  [2016-02-19 16:16:06,780] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@5f80fa43{/,null,AVAILABLE}
+INFO  [2016-02-19 16:16:06,786] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2016-02-19 16:16:06,791] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@2e3cdec2{/,null,AVAILABLE}
+INFO  [2016-02-19 16:16:06,841] org.eclipse.jetty.server.ServerConnector: Started application@1991f767{HTTP/1.1}{0.0.0.0:18000}
+INFO  [2016-02-19 16:16:06,842] org.eclipse.jetty.server.ServerConnector: Started admin@768ccdc5{HTTP/1.1}{0.0.0.0:18010}
+INFO  [2016-02-19 16:16:06,842] org.eclipse.jetty.server.Server: Started @2452ms
+ERROR [2016-02-19 16:16:10,347] io.dropwizard.jersey.errors.LoggingExceptionMapper: Error handling a request: f955c5b00b0d569b
+! java.lang.NullPointerException: null
+! at com.lin.resource.HelloWorldResource.sayHello(HelloWorldResource.java:33) ~[classes/:na]
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
+! at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+! at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81) ~[jersey-server-2.22.1.jar:na]
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144) ~[jersey-server-2.22.1.jar:na]
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161) ~[jersey-server-2.22.1.jar:na]
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$TypeOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:205) ~[jersey-server-2.22.1.jar:na]
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99) ~[jersey-server-2.22.1.jar:na]
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389) ~[jersey-server-2.22.1.jar:na]
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347) ~[jersey-server-2.22.1.jar:na]
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102) ~[jersey-server-2.22.1.jar:na]
+! at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326) ~[jersey-server-2.22.1.jar:na]
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271) [jersey-common-2.22.1.jar:na]
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267) [jersey-common-2.22.1.jar:na]
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:315) [jersey-common-2.22.1.jar:na]
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:297) [jersey-common-2.22.1.jar:na]
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:267) [jersey-common-2.22.1.jar:na]
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317) [jersey-common-2.22.1.jar:na]
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305) [jersey-server-2.22.1.jar:na]
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154) [jersey-server-2.22.1.jar:na]
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:471) [jersey-container-servlet-core-2.22.1.jar:na]
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:425) [jersey-container-servlet-core-2.22.1.jar:na]
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:383) [jersey-container-servlet-core-2.22.1.jar:na]
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:336) [jersey-container-servlet-core-2.22.1.jar:na]
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:223) [jersey-container-servlet-core-2.22.1.jar:na]
+! at io.dropwizard.jetty.NonblockingServletHolder.handle(NonblockingServletHolder.java:49) [dropwizard-jetty-0.9.2.jar:0.9.2]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1669) [jetty-servlet-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.servlets.UserAgentFilter.doFilter(UserAgentFilter.java:83) [jetty-servlets-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.servlets.GzipFilter.doFilter(GzipFilter.java:364) [jetty-servlets-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at io.dropwizard.jetty.BiDiGzipFilter.doFilter(BiDiGzipFilter.java:132) [dropwizard-jetty-0.9.2.jar:0.9.2]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652) [jetty-servlet-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) [dropwizard-servlets-0.9.2.jar:0.9.2]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652) [jetty-servlet-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:43) [dropwizard-jersey-0.9.2.jar:0.9.2]
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:38) [dropwizard-jersey-0.9.2.jar:0.9.2]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652) [jetty-servlet-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:585) [jetty-servlet-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127) [jetty-server-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515) [jetty-servlet-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061) [jetty-server-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) [jetty-server-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97) [jetty-server-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at com.codahale.metrics.jetty9.InstrumentedHandler.handle(InstrumentedHandler.java:240) [metrics-jetty9-3.1.2.jar:3.1.2]
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:51) [dropwizard-jetty-0.9.2.jar:0.9.2]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97) [jetty-server-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:159) [jetty-server-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97) [jetty-server-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.server.Server.handle(Server.java:499) [jetty-server-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:310) [jetty-server-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257) [jetty-server-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540) [jetty-io-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635) [jetty-util-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555) [jetty-util-9.2.13.v20150730.jar:9.2.13.v20150730]
+! at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]

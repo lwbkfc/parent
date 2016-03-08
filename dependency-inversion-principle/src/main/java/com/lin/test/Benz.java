@@ -1,7 +1,7 @@
 package com.lin.test;
 
 /**
- * Created by lwb on 16/1/11.
+ * Created by lwb on 16/pattern1/11.
  */
 public class Benz implements ICar {
     public void run() {

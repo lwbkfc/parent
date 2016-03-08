@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.BeanFactory;
 
 /**
- * Created by lwb on 16/1/12.
+ * Created by lwb on 16/pattern1/12.
  */
 public class BeanFactoryTest {
     @Test
